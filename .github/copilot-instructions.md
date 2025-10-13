@@ -24,6 +24,9 @@
 - `config/_default/menus.zh-cn.toml`
   - 头部与页脚菜单（中文）。
 
+### 参考文档
+- 主题配置文档：`themes/blowfish/exampleSite/content/docs/configuration/index.zh-cn.md`
+
 ### 本地开发与构建
 - 预览：`hugo server -D`（含草稿）；线上构建默认忽略草稿（`buildDrafts=false`）。
 - 生产构建：`hugo --minify`（生成至 `public/`）。
@@ -61,6 +64,3 @@
 - 多语言：当前仅配置了 zh-cn；如需新增语言，请参照主题 exampleSite 的多语言配置添加对应 `languages.<lang>.toml` 与菜单文件。
 
 如需补充或澄清本说明中仍不明确的部分（如 CI/部署细节、主题覆盖策略），请在本文件追加要点或提出问题以共同完善。
-
-### 参考链接
-- 配置参考：https://blowfish.page/docs/configuration/
