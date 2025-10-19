@@ -3,6 +3,7 @@ title: "在Niri/Hyprland中统一默认文件管理器、文件选择器、打�
 date: 2025-10-18T22:06:23+08:00
 draft: false
 description: ""
+tags: ["Linux","美化"]
 ---
 在Niri或Hyprland这样轻量的桌面合成器上，通常没有完善的桌面门户组件（实际上 Hyprland 有 xdg-desktop-potal-hyprland），或换了多个作者做的dotfile后，KDE、GNOME等组件都给装上了，打开文件夹时，各种文件管理器就开始群魔乱舞了：一会打开的是KDE的、应用QT主题的Dolphin，一会是GNOME的、应用GTK主题的Nautilus，一会是xdg-desktop-potal的、应用GTK主题的、我也不知道叫啥名的文件选择器......
 
@@ -99,9 +100,7 @@ XDG_SESSION_DESKTOP "kde"
 ---
 
 ## 后记
-最近是从Hyprland叛逃到Niri了，之前在Hyprland一直使用的是end4这个作者的 illogical-impluse dofile，所以KDE组件用惯了，而且KDE的应用主题是QT的，matugen这种主题色生成工具生成的颜色方案应用基本没问题。坚持统一文件管理器的主要原因是Dolphin在美观的同时，实用性也很强，~~最重要的是我是强迫症，必须要统一。~~不过我平时使用yazi更多，只不过拖动文件时需要图形界面的管理器。
-
-我现在niri使用的是noctalia shell这个dotfile。统一默认文件管理器的过程中我不得不佩服这些开发者们能解决这么多应用统一问题来创建一个和谐的linux桌面环境。
+最近从Hyprland叛逃到Niri了，之前在Hyprland一直使用的是end4这个作者的 illogical-impluse dofile，现在用的noctalia shell也是，KDE组件用惯了，而且KDE的应用主题是QT的，matugen这种主题色生成工具生成的颜色方案应用基本没问题。坚持统一文件管理器的主要原因是Dolphin在美观的同时，实用性也很强，~~最重要的是我是强迫症，必须要统一。~~不过我平时使用yazi更多，只不过拖动文件时需要图形界面管理器，yazi也有个拖动插件，只不过效果不是很好。
 
 ---
 
