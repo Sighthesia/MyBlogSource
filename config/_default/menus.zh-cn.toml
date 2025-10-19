@@ -25,19 +25,6 @@ name = "分类"
 pageRef = "/tags"
 weight = 30
 
-[[main]]
-identifier = "twitter"
-pre = "x-twitter"
-url = "https://twitter.com/burufugu"
-weight = 200
-
-[[main]]
-identifier = "github"
-pre = "github"
-url = "https://github.com/nunocoracao/blowfish"
-weight = 400
-
-
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
@@ -47,6 +34,6 @@ pageRef = "/"
 weight = 10
 
 [[footer]]
-name = "作者"
+name = "关于作者"
 pageRef = "authors"
 weight = 20

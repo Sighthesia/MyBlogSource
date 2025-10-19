@@ -13,10 +13,11 @@ description = "观象Sighthesia的博客"
 
 [params.author]
 name = "Sighthesia"
-image = "img/blowfish_logo.png"
-headline = "永不停歇"
+image = "img/9的冻英吉利森_琪露诺.png"
+headline = "做自己喜欢的 XD"
 bio = "做自己喜欢的 XD"
 links = [
-  { x-twitter = "https://twitter.com/burufugu" },
-  { github = "https://github.com/nunocoracao/blowfish" },
+  { bilibili = "https://space.bilibili.com/351321394" },
+  { github = "https://github.com/Sighthesia" },
+  { csdn = "https://blog.csdn.net/ZxeeGX" },
 ]
