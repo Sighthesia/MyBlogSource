@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blowfish</title>
-    <link>//localhost:1313/</link>
-    <description>Recent content on Blowfish</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <title>Sighthesia&#39;s Blog</title>
+    <link>https://sighthesia.github.io/</link>
+    <description>Recent content on Sighthesia&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Sighthesia</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 22:48:57 +0800</lastBuildDate><atom:link href="https://sighthesia.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用pcman及aur助手更新时忽略或暂时忽略软件包方法摘要</title>
+      <link>https://sighthesia.github.io/posts/%E4%BD%BF%E7%94%A8pcman%E5%8F%8Aaur%E5%8A%A9%E6%89%8B%E6%9B%B4%E6%96%B0%E6%97%B6%E5%BF%BD%E7%95%A5%E6%88%96%E6%9A%82%E6%97%B6%E5%BF%BD%E7%95%A5%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%96%B9%E6%B3%95%E6%91%98%E8%A6%81/</link>
+      <pubDate>Sun, 12 Oct 2025 22:48:57 +0800</pubDate>
+      
+      <guid>https://sighthesia.github.io/posts/%E4%BD%BF%E7%94%A8pcman%E5%8F%8Aaur%E5%8A%A9%E6%89%8B%E6%9B%B4%E6%96%B0%E6%97%B6%E5%BF%BD%E7%95%A5%E6%88%96%E6%9A%82%E6%97%B6%E5%BF%BD%E7%95%A5%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%96%B9%E6%B3%95%E6%91%98%E8%A6%81/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>
