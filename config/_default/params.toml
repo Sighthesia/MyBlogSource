@@ -23,7 +23,7 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "img/103896155_p0.png" # used as default for background images 
+defaultBackgroundImage = "img/103896155_p0.png" # used as default for background images
 # defaultFeaturedImage = "home-card.png" # used as default for featured images in all articles
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 
@@ -135,13 +135,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyC2PqvkLmurQEjpjPxNl50aQjtXjLOf9pM"
+  authDomain = "sighthesia-s-blog.firebaseapp.com"
+  projectId = "sighthesia-s-blog"
+  storageBucket = "sighthesia-s-blog.firebasestorage.app"
+  messagingSenderId = "1087922454289"
+  appId = "1:1087922454289:web:e86d977b64af722a2316b0"
+  measurementId = "G-8TXM2EBRH4"
 
 [fathomAnalytics]
   # site = "ABC12345"
