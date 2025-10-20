@@ -1,0 +1,13 @@
+<!--
+  生成 <a> 标签的链接属性。
+  输入：页面对象（.Page 或等价 page）
+  行为：
+  - 若存在 .Params.externalUrl，则输出外链属性（href/target/rel）
+  - 否则链接到页面的 RelPermalink
+-->
+{{- $p := . -}}
+{{- with $p.Params.externalUrl -}}
+href="{{ . }}" target="_blank" rel="external"
+{{- else -}}
+href="{{ $p.RelPermalink }}"
+{{- end -}}
