@@ -9,8 +9,21 @@ Usage:
 - The script is loaded async and uses `data-theme="preferred_color_scheme"` to follow site theme.
 */}}
 
-<script src="https://giscus.app/client.js" data-repo="Sighthesia/sighthesia.github.io" data-repo-id="R_kgDOO2XQ8w"
-    data-category="Announcements" data-category-id="DIC_kwDOO2XQ884Cw2G7" data-mapping="pathname" data-strict="0"
-    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
-    data-lang="zh-CN" crossorigin="anonymous" async>
+<head>
+    <!-- ... -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+    <!-- ... -->
+</head>
+
+<body>
+    <!-- ... -->
+    <div id="waline"></div>
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+        init({
+            el: '#waline',
+            serverURL: 'https://sighthesia-s-blog.vercel.app/',
+        });
     </script>
+</body>
