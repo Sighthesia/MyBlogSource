@@ -1,0 +1,19 @@
+<script type="module">
+    const serverURL = "{{ .Site.Params.waline.serverURL }}";
+    if (serverURL) {
+        import('https://unpkg.com/@waline/client@v3/dist/waline.js').then(({ init }) => {
+            const hasComments = !!document.getElementById('waline');
+            const hasCounters = document.querySelectorAll('.waline-pageview-count').length > 0;
+            const options = { serverURL };
+            if (hasComments) {
+                options.el = '#waline';
+                options.pageview = hasCounters ? '.waline-pageview-count' : true;
+            } else if (hasCounters) {
+                options.pageview = '.waline-pageview-count';
+            }
+            if (options.pageview || options.el) {
+                init(options);
+            }
+        });
+    }
+</script>
