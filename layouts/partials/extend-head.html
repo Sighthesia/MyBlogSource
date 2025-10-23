@@ -1,1 +1,46 @@
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
+<style>
+	:root {
+		/* Waline variables mapped to Blowfish theme palette (light) */
+		--waline-theme-color: rgb(var(--color-primary-500));
+		--waline-active-color: rgb(var(--color-primary-600));
+		--waline-text-color: rgb(var(--color-neutral-700));
+		--waline-bgcolor: rgb(var(--color-neutral-50));
+		--waline-bgcolor-light: rgb(var(--color-neutral-100));
+		--waline-border-color: rgb(var(--color-neutral-300));
+		--waline-border: 1px solid var(--waline-border-color);
+		--waline-disable-bgcolor: rgb(var(--color-neutral-200));
+		--waline-disable-color: rgb(var(--color-neutral-500));
+		--waline-code-bgcolor: rgb(var(--color-neutral-100));
+		--waline-info-bgcolor: rgba(var(--color-secondary-100), 1);
+		--waline-info-color: rgb(var(--color-secondary-700));
+		--waline-badge-color: rgb(var(--color-secondary-500));
+		--waline-box-shadow: 0 10px 20px rgba(0,0,0,.05);
+	}
+
+	.dark {
+		/* Dark mode overrides to match Blowfish dark palette */
+		--waline-theme-color: rgb(var(--color-primary-400));
+		--waline-active-color: rgb(var(--color-primary-300));
+		--waline-text-color: rgb(var(--color-neutral-300));
+		--waline-bgcolor: rgb(var(--color-neutral-900));
+		--waline-bgcolor-light: rgb(var(--color-neutral-800));
+		--waline-border-color: rgb(var(--color-neutral-700));
+		--waline-border: 1px solid var(--waline-border-color);
+		--waline-disable-bgcolor: rgb(var(--color-neutral-800));
+		--waline-disable-color: rgb(var(--color-neutral-500));
+		--waline-code-bgcolor: rgb(var(--color-neutral-800));
+		--waline-info-bgcolor: rgba(var(--color-secondary-900), .35);
+		--waline-info-color: rgb(var(--color-secondary-300));
+		--waline-badge-color: rgb(var(--color-secondary-400));
+		--waline-box-shadow: 0 10px 20px rgba(0,0,0,.2);
+	}
+
+	/* Align pageview count color with body text for subtlety */
+	.waline-pageview-count {
+		color: rgb(var(--color-neutral-600));
+	}
+	.dark .waline-pageview-count {
+		color: rgb(var(--color-neutral-300));
+	}
+</style>
