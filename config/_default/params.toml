@@ -135,13 +135,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  apiKey = "AIzaSyC2PqvkLmurQEjpjPxNl50aQjtXjLOf9pM"
-  authDomain = "sighthesia-s-blog.firebaseapp.com"
-  projectId = "sighthesia-s-blog"
-  storageBucket = "sighthesia-s-blog.firebasestorage.app"
-  messagingSenderId = "1087922454289"
-  appId = "1:1087922454289:web:e86d977b64af722a2316b0"
-  measurementId = "G-8TXM2EBRH4"
+  # apiKey = ""
+  # authDomain = ""
+  # projectId = ""
+  # storageBucket = ""
+  # messagingSenderId = ""
+  # appId = ""
+  # measurementId = ""
 
 [fathomAnalytics]
   # site = "ABC12345"
