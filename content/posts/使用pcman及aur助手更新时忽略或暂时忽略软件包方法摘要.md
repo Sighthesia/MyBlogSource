@@ -50,5 +50,3 @@ paru -Syu --ignore nvidia-dkms,nvidia-utils,opencl-nvidia,lib32-nvidia-utils
 ## 后记
 - 摘自：[Arch Linux Wiki - pacman](https://wiki.archlinuxcn.org/wiki/Pacman#%E5%9C%A8%E5%8D%87%E7%BA%A7%E6%97%B6%E8%B7%B3%E8%BF%87%E8%BD%AF%E4%BB%B6%E5%8C%85)
 - 参考：[Github - How can I ignore one package when updating?](https://github.com/Morganamilo/paru/discussions/813)
-
-可以猜猜我为什么要忽略 nvidia 的更新？😊当然是某次更新后我用的 hyprland 突然无法正常调度 n 卡了，至今未解决，so **** you nvidia 🤓
