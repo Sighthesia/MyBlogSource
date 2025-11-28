@@ -1,0 +1,369 @@
+# Folder Structure
+
+## Project Root Structure
+
+```
+MyBlogSource/
+├── .github/                    # GitHub configuration and Copilot instructions
+│   └── copilot/               # Copilot context files
+├── archetypes/                # Content templates for hugo new
+├── assets/                    # Source assets (processed by Hugo)
+├── config/                    # Configuration files
+│   └── _default/              # Default environment config
+├── content/                   # All site content (Markdown files)
+├── data/                      # Data files for Hugo templates
+├── i18n/                      # Internationalization files
+├── layouts/                   # Custom layout overrides
+├── public/                    # Generated static site (deployed to GitHub Pages)
+├── resources/                 # Hugo generated resources cache
+├── static/                    # Static files (copied as-is)
+└── themes/                    # Theme directory (git submodule)
+    └── blowfish/              # Blowfish theme (DO NOT MODIFY)
+```
+
+## Directory Details
+
+### `.github/copilot/`
+**Purpose**: GitHub Copilot instruction files for consistent code generation
+
+**Files**:
+- `copilot-instructions.md` - Main instruction file
+- `tech-stack.md` - Technology version documentation
+- `folder-structure.md` - This file
+- `coding-standards.md` - Content and code standards
+
+**Usage**: Referenced automatically by GitHub Copilot
+
+---
+
+### `archetypes/`
+**Purpose**: Templates for creating new content with `hugo new`
+
+**Files**:
+- `default.md` - Default template for blog posts
+- `external.md` - Template for external link posts
+
+**Pattern**:
+```markdown
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+description: ""
+---
+```
+
+**Usage**: `hugo new content posts/文章标题.md` uses these templates
+
+---
+
+### `assets/`
+**Purpose**: Source assets processed by Hugo pipelines
+
+**Structure**:
+```
+assets/
+├── css/
+│   └── custom.css         # Custom CSS (currently empty, uses Tailwind)
+├── icons/                 # Icon files
+├── img/                   # Image assets
+│   ├── 9的冻英吉利森_琪露诺.png  # Avatar
+│   └── 103896155_p0.png   # Background image
+└── js/                    # JavaScript files
+```
+
+**Processing**: Hugo processes these files (minification, fingerprinting, etc.)
+
+---
+
+### `config/_default/`
+**Purpose**: Default configuration for all environments
+
+**Files**:
+- `hugo.toml` - Core Hugo settings (theme, baseURL, language, taxonomies)
+- `params.toml` - Blowfish theme parameters (layout, appearance, features)
+- `languages.zh-cn.toml` - Chinese language configuration
+- `menus.zh-cn.toml` - Navigation menu structure
+- `markup.toml` - Markdown rendering configuration (Goldmark settings)
+- `module.toml` - Hugo modules configuration (currently empty)
+
+**Convention**: Split configuration by concern (not one monolithic config file)
+
+**Modification Pattern**:
+1. Identify the correct file based on setting type
+2. Preserve existing comment structure
+3. Test with `hugo server` before committing
+
+---
+
+### `content/`
+**Purpose**: All site content in Markdown format
+
+**Structure**:
+```
+content/
+├── posts/                              # Blog posts
+│   ├── 使用pcman及aur助手更新时忽略或暂时忽略软件包方法摘要.md
+│   └── 在Niri和Hyprland中统一默认文件管理器、文件选择器、打开目录所用的文件管理器.md
+└── [other sections as needed]
+```
+
+**Naming Convention**:
+- Use descriptive Chinese filenames
+- Hyphens or spaces acceptable (Hugo normalizes URLs)
+- One Markdown file per post
+
+**Frontmatter Requirements**:
+- Must use TOML format between `---` delimiters
+- Required fields: `title`, `date`, `draft`
+- Recommended fields: `description`, `tags`
+
+---
+
+### `data/`
+**Purpose**: Data files accessible in Hugo templates
+
+**Usage**: Store structured data (YAML, JSON, TOML) for use in templates
+
+**Current Status**: Empty (theme provides default data)
+
+---
+
+### `i18n/`
+**Purpose**: Translation files for internationalization
+
+**Current Status**: Empty (uses theme's built-in translations)
+
+**Pattern** (if needed):
+```
+i18n/
+└── zh-cn.yaml             # Chinese translations
+```
+
+---
+
+### `layouts/`
+**Purpose**: Custom layout overrides for Blowfish theme
+
+**Structure**:
+```
+layouts/
+└── partials/
+    ├── article-link/      # Article link customization
+    ├── meta/              # Meta information customization
+    ├── comments.html      # Waline comment container
+    ├── extend-footer.html # Footer extensions
+    └── extend-head.html   # Head extensions (Waline CSS/JS)
+```
+
+**Override Pattern**:
+1. Hugo checks `layouts/` first, then `themes/blowfish/layouts/`
+2. Create file with same path as theme file to override
+3. Partial overrides preferred over full layout overrides
+
+**Critical Files**:
+- `extend-head.html` - Loads Waline CSS and maps theme variables
+- `comments.html` - Waline comment system integration
+
+---
+
+### `public/`
+**Purpose**: Generated static site (output directory)
+
+**Generated By**: `hugo` command (without -D flag)
+
+**Contents**:
+- All static HTML files
+- Processed CSS/JS assets
+- Copied static files
+- RSS feeds, JSON search index, sitemap
+
+**Git Tracking**: Tracked and pushed to main branch for GitHub Pages deployment
+
+**Regeneration**: Delete and rebuild with `rm -rf public && hugo`
+
+---
+
+### `resources/`
+**Purpose**: Hugo's cache for generated resources
+
+**Contents**:
+- `_gen/` - Generated assets (images, CSS, etc.)
+
+**Git Tracking**: Not tracked (generated files)
+
+**Maintenance**: Can be deleted safely; Hugo regenerates as needed
+
+---
+
+### `static/`
+**Purpose**: Files copied as-is to `public/` without processing
+
+**Files**:
+- `BingSiteAuth.xml` - Bing webmaster verification
+- `site.webmanifest` - PWA manifest
+
+**Usage**: For files that should not be processed by Hugo pipelines
+
+---
+
+### `themes/blowfish/`
+**Purpose**: Blowfish theme (git submodule)
+
+**Version**: 2.91.0
+
+**Structure**:
+```
+themes/blowfish/
+├── assets/            # Theme assets (CSS, JS)
+├── layouts/           # Theme layouts (DO NOT MODIFY)
+├── static/            # Theme static files
+├── i18n/              # Theme translations
+├── exampleSite/       # Example site and documentation
+├── config.toml        # Theme Hugo version requirements
+└── package.json       # Theme version and npm scripts
+```
+
+**⚠️ CRITICAL RULE**: Never modify files in this directory
+- All customizations must be done via project-level overrides
+- Theme is managed via git submodule
+- Updates are handled by updating submodule reference
+
+---
+
+## File Location Decision Tree
+
+### Where to put new content?
+
+**Blog post** → `content/posts/*.md`
+
+**Static file (image, PDF, etc.)** → `static/` or `assets/img/`
+- Use `static/` if file should not be processed
+- Use `assets/` if Hugo should optimize/process
+
+**Configuration change** → `config/_default/*.toml`
+- Hugo core settings → `hugo.toml`
+- Theme appearance/features → `params.toml`
+- Markdown rendering → `markup.toml`
+- Menus → `menus.zh-cn.toml`
+- Language settings → `languages.zh-cn.toml`
+
+**Custom CSS** → `assets/css/custom.css`
+
+**Custom JavaScript** → `assets/js/*.js`
+
+**Theme override** → `layouts/` (mirror theme structure)
+- Example: Override `themes/blowfish/layouts/partials/x.html`
+- Create: `layouts/partials/x.html`
+
+**Data for templates** → `data/*.{yaml,json,toml}`
+
+**Translation override** → `i18n/zh-cn.yaml`
+
+**Content template** → `archetypes/*.md`
+
+---
+
+## Directory Permissions and Conventions
+
+### Read-Only Directories (Do Not Modify)
+- `themes/blowfish/` - Managed via git submodule
+- `resources/_gen/` - Auto-generated cache
+- `public/` - Build output (regenerate instead of editing)
+
+### Writable Directories (Safe to Modify)
+- `content/` - Primary content creation area
+- `config/_default/` - Configuration changes
+- `layouts/partials/` - Theme overrides
+- `assets/` - Custom assets
+- `static/` - Static files
+
+### Auto-Generated Directories (Can Delete)
+- `resources/` - Hugo regenerates on next build
+- `public/` - Regenerate with `hugo` command
+
+---
+
+## Common Directory Operations
+
+### Creating a New Blog Post
+```fish
+# Creates: content/posts/新文章.md
+hugo new content posts/新文章.md
+```
+
+### Adding an Image
+```fish
+# For processed images (Hugo optimizes)
+cp image.png assets/img/
+
+# For static images (copied as-is)
+cp image.png static/img/
+```
+
+### Overriding a Theme Layout
+```fish
+# 1. Find theme file: themes/blowfish/layouts/partials/example.html
+# 2. Create override: layouts/partials/example.html
+# 3. Copy and modify content
+```
+
+### Updating Theme
+```fish
+# Update git submodule to latest version
+cd themes/blowfish
+git pull origin main
+cd ../..
+git add themes/blowfish
+git commit -m "Update Blowfish theme"
+```
+
+### Clean Build
+```fish
+# Remove generated files
+rm -rf public resources
+
+# Rebuild
+hugo
+```
+
+---
+
+## File Naming Conventions
+
+### Markdown Files
+- **Posts**: Descriptive Chinese names, e.g., `在Niri和Hyprland中统一默认文件管理器.md`
+- **URL Generation**: Hugo converts to slug automatically
+- **Avoid**: Special characters that break URLs
+
+### Asset Files
+- **Images**: Descriptive names, e.g., `103896155_p0.png`
+- **CSS**: `custom.css` (avoid multiple files)
+- **JavaScript**: `script-name.js` (kebab-case)
+
+### Configuration Files
+- **Format**: Always `.toml` (not `.yaml` or `.json`)
+- **Location**: Always in `config/_default/`
+- **Naming**: Lowercase, descriptive (e.g., `params.toml`, `menus.zh-cn.toml`)
+
+---
+
+## Directory Security Notes
+
+### Publicly Accessible (in public/)
+- All content in `content/`
+- All files in `static/`
+- Processed files from `assets/`
+- Generated HTML, CSS, JS
+
+### Not Published
+- `config/` - Configuration files
+- `.github/` - GitHub-specific files
+- `archetypes/` - Content templates
+- `resources/` - Build cache
+- `themes/` - Theme source (only compiled assets published)
+
+### Sensitive Information
+- Never put API keys or secrets in config files
+- Use environment variables for sensitive data
+- Comment system secrets managed on Vercel
