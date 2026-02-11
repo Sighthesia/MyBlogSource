@@ -4,7 +4,8 @@ date: 2026-02-11T20:03:59+08:00
 draft: true
 description: ""
 tags: ["Linux","优化"]
-series = "Btrfs优化"
+series: ["Btrfs优化"]
+series_order: 1
 ---
 # 前情
 
@@ -54,7 +55,7 @@ series = "Btrfs优化"
 
 ## 2. 重建引导
 
-完成数据迁移后，先不要关机，也不要拔掉硬盘，由于引导分区还在旧硬盘上，并且fstab中挂载的EFI分区的UUID仍然还是旧硬盘的，所以关机后进不了系统，我们需要为新硬盘的EFI分区重建引导，并修改fstab。
+完成数据迁移后，先不要关机，也不要拔掉硬盘，由于引导分区还在旧硬盘上，并且fstab中挂载的EFI分区的UUID仍然还是旧硬盘的，所以关机后进不了系统，需要为新硬盘的EFI分区重建引导，并修改fstab。
 
 - Btrfs的UUID是由文件系统格式化时生成的标识符，而迁移操作会将UUID一并迁移，所以只需要修改新创建的EFI分区的UUID即可。
 
