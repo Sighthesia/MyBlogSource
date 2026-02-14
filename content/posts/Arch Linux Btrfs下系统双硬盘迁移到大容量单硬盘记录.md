@@ -1,7 +1,7 @@
 ---
 title: "Arch Linux Btrfs下系统从双硬盘迁移到大容量单硬盘记录"
 date: 2026-02-11T20:03:59+08:00
-draft: true
+draft: false
 description: ""
 tags: ["Linux","优化"]
 series: ["Btrfs优化"]
