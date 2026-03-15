@@ -8,7 +8,7 @@ tags: ["Linux","硬件"]
 # 前情
 最近看到了关于立创EDA开启GPU加速的B站专栏，评论区中`Chucaaa_`网友提到了Linux下开启WebGPU加速的方法，我分别在N卡(3050Ti Laptop)和AMD核显(6800H，Radeon 680M)的机器上测试了，均能正常加速。
 
-![评论](../static/attachments/Screenshot_2026-03-15-13-22-39.png)
+![评论](/attachments/Screenshot_2026-03-15-13-22-39.png)
 
 # 方法
 
