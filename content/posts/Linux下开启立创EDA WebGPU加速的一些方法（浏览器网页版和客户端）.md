@@ -26,13 +26,13 @@ tags: ["Linux","硬件"]
     lceda-pro --enable-features=Vulkan --enable-unsafe-webgpu
     ```
 
-2. 如果有效，可以在立创EDA客户端的`.desktop`文件（`/usr/share/applications/lceda-pro.desktop`）的启动参数（`Exec`）行中追加 `--enable-features=Vulkan --enable-unsafe-webgpu`，如：
+2. 如果有效，可以复制一份立创EDA客户端的`.desktop`文件（`/usr/share/applications/lceda-pro.desktop`）到`~/.local/share/applications`目录下，并在启动参数（`Exec`）行中追加 `--enable-features=Vulkan --enable-unsafe-webgpu`，如：
 
     ```bash
     Exec=lceda-pro %f --no-sandbox --enable-features=Vulkan --enable-unsafe-webgpu
     ```
 
-    这样通过桌面快捷方式或启动器打开EDA客户端时，就能直接开启加速（注意每次更新后都需要重新修改.desktop文件）。
+    这样通过桌面快捷方式或启动器打开EDA客户端时，就能直接开启加速。
 
 ### 浏览器网页版
 
