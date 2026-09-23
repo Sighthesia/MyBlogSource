@@ -40,7 +40,7 @@ tags: ["Linux","硬件"]
 
 ### EDA PCB渲染引擎设置
 嘉立创EDA的`PCB/封装`中有的`显示`里有渲染引擎的选项，需要改为**WebGPU**，不然可能仍无法加速。
-![EDA设置](/attachments/Screenshot_2026-09-23 12-48-12.png)
+![EDA设置](/attachments/Screenshot_2026-09-23-12-48-12.png)
 
 #### Chromium系浏览器（Chrome、Edge）
 如上面所说，`--enable-features=Vulkan`可以将 Chromium/Electron 的底层图形绘制接口切换为Vulkan API，所以也可以参考上面的方法，通过加入`--enable-features=Vulkan --enable-unsafe-webgpu`参数来启动浏览器，可以直接开启WebGPU加速。
